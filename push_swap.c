@@ -2,16 +2,14 @@
 
 int main(int argc, char **argv)
 {
-    t_node  *stack_a;
-    t_node  *stack_b;
-    char    *joined_args;
-    char    **numbers;
+	t_node  *stack_a;
+	t_node  *stack_b;
+	char	**numbers;
+	if (argc < 2)
+		return 0;
+	stack_a = NULL;
+	stack_b = NULL;
 
-    if (argc < 2)
-        return 0;
-    stack_a = NULL;
-    stack_b = NULL;
-
-    joined_args = joined_arguments(argc, argv);
-    return 0;
+	numbers = parse_input(argc, argv);
+	return (0);
 }

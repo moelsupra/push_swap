@@ -11,5 +11,6 @@ typedef struct s_node
 	struct s_node	*next;
 }	t_node;
 
-char *join_arguments(int argc, char **argv);
+char    **parse_input(int argc, char **argv);
+
 #endif
