@@ -2,14 +2,27 @@
 
 int main(int argc, char **argv)
 {
-	t_node  *stack_a;
-	t_node  *stack_b;
-	char	**numbers;
-	if (argc < 2)
-		return 0;
-	stack_a = NULL;
-	stack_b = NULL;
+	int	*numbers;
+	int	count;
+	int	i;
 
-	numbers = parse_input(argc, argv);
+	if (argc < 2)
+		return (0);
+	numbers = parse_arguments(argc, argv, &count);
+
+
+	if (!numbers)
+	{
+		write(2, "Error\n", 6);
+		return (1);
+	}
+	i = 0;
+	printf("Successfully parsed %d numbers:\n", count);
+	while (i < count)
+	{
+		printf("%d\n", numbers[i]);
+		i++;
+	}
+	free(numbers);
 	return (0);
 }
