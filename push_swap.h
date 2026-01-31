@@ -20,4 +20,10 @@ int	fill_numbers_array(char **argv, int argc, int *numbers);
 int	safe_atoi(char *str, int *j, int *result);
 int	*parse_arguments(int argc, char **argv, int *count);
 
+t_node	*create_node(int value, int index);
+void	push_to_bottom(t_node **stack, t_node *new_node);
+void	assign_indexes(t_node *stack, int *numbers, int count);
+t_node	*build_stack(int *numbers, int count);
+int		is_sorted(t_node *stack);
+
 #endif

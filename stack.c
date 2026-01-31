@@ -71,3 +71,20 @@ t_node	*build_stack(int *numbers, int count)
 	assign_indexes(stack, numbers, count);
 	return (stack);
 }
+
+int is_sorted(t_node *stack)
+{
+	int	i;
+	t_node *current;
+
+	i = 0;
+	current = stack;
+	while (current)
+	{
+		if (current->index != i)
+			return (0);
+		i++;
+		current = current->next;
+	}
+	return (1);
+}
