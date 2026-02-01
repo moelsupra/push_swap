@@ -88,3 +88,20 @@ int is_sorted(t_node *stack)
 	}
 	return (1);
 }
+
+void	free_stack(t_node **stack)
+{
+	t_node	*current;
+	t_node	*temp;
+
+	if (!stack || !*stack)
+		return ;
+	current = *stack;
+	while (current)
+	{
+		temp = current->next;
+		free(current);
+		current = temp;
+	}
+	*stack = NULL;
+}

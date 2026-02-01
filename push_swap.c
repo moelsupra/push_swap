@@ -6,7 +6,7 @@ int	main(int argc, char **argv)
 	int		*numbers;
 	int		count;
 	t_node	*stack_a;
-	t_node	*current;
+	t_node	*stack_b;
 
 	if (argc < 2)
 		return (0);
@@ -25,18 +25,22 @@ int	main(int argc, char **argv)
 	}
 	if (is_sorted(stack_a))
 	{
-		printf("Stack is already sorted!\n");
 		free(numbers);
+		free_stack(&stack_a);
 		return (0);
 	}
-	current = stack_a;
-	printf("Stack A (top to bottom):\n");
-	while (current)
-	{
-		printf("value: %d, index: %d\n", current->value, current->index);
-		current = current->next;
-	}
-	printf("\nStack needs to be sorted.\n");
+	if (count == 2)
+		sort_two(&stack_a);
+	else if (count == 3)
+		sort_three(&stack_a);
+	else if (count == 4)
+		sort_four(&stack_a, &stack_b);
+	else if (count == 5)
+		sort_five(&stack_a, &stack_b);
+	else
+		printf("Stack size %d - sorting not implemented yet\n", count);
 	free(numbers);
+	free_stack(&stack_a);
+	free_stack(&stack_b);
 	return (0);
 }
