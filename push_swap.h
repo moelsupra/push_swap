@@ -46,5 +46,6 @@ int		find_position(t_node *stack, int target_index);
 void	move_to_top(t_node **stack, int pos);
 void	sort_four(t_node **stack_a, t_node **stack_b);
 void	sort_five(t_node **stack_a, t_node **stack_b);
+void	chunk_sort(t_node **stack_a, t_node **stack_b, int size);
 
 #endif

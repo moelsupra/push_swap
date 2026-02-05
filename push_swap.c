@@ -10,6 +10,7 @@ int	main(int argc, char **argv)
 
 	if (argc < 2)
 		return (0);
+	stack_b = NULL;
 	numbers = parse_arguments(argc, argv, &count);
 	if (!numbers)
 	{
@@ -38,7 +39,7 @@ int	main(int argc, char **argv)
 	else if (count == 5)
 		sort_five(&stack_a, &stack_b);
 	else
-		printf("Stack size %d - sorting not implemented yet\n", count);
+		chunk_sort(&stack_a, &stack_b, count);	
 	free(numbers);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
