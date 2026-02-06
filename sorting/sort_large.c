@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 20:13:00 by moelamma          #+#    #+#             */
-/*   Updated: 2026/02/06 23:56:04 by moelamma         ###   ########.fr       */
+/*   Updated: 2026/02/07 00:12:55 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,26 @@ int	find_max_index(t_node *stack)
 	return (max);
 }
 
+void	rotate_max_to_top(t_node **stack_b, int pos, int size)
+{
+	if (pos <= size / 2)
+	{
+		while (pos > 0)
+		{
+			rb(stack_b);
+			pos--;
+		}
+	}
+	else
+	{
+		while (pos < size)
+		{
+			rrb(stack_b);
+			pos++;
+		}
+	}
+}
+
 void	push_back_from_b(t_node **stack_a, t_node **stack_b)
 {
 	int	max_index;
@@ -51,22 +71,7 @@ void	push_back_from_b(t_node **stack_a, t_node **stack_b)
 		max_index = find_max_index(*stack_b);
 		pos = find_index_position(*stack_b, max_index);
 		size = stack_size(*stack_b);
-		if (pos <= size / 2)
-		{
-			while (pos > 0)
-			{
-				rb(stack_b);
-				pos--;
-			}
-		}
-		else
-		{
-			while (pos < size)
-			{
-				rrb(stack_b);
-				pos++;
-			}
-		}
+		rotate_max_to_top(stack_b, pos, size);
 		pa(stack_a, stack_b);
 	}
 }
