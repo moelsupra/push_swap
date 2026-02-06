@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   swap.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/06 20:24:11 by moelamma          #+#    #+#             */
+/*   Updated: 2026/02/06 20:24:43 by moelamma         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 void	swap(t_node **stack)
@@ -9,7 +21,6 @@ void	swap(t_node **stack)
 		return ;
 	first = *stack;
 	second = first->next;
-
 	first->next = second->next;
 	second->next = first;
 	*stack = second;

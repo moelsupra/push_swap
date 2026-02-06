@@ -1,39 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push.c                                             :+:      :+:    :+:   */
+/*   stack_helper.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/06 20:23:51 by moelamma          #+#    #+#             */
-/*   Updated: 2026/02/06 20:25:21 by moelamma         ###   ########.fr       */
+/*   Created: 2026/02/06 18:59:46 by moelamma          #+#    #+#             */
+/*   Updated: 2026/02/06 19:00:27 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	pb(t_node **stack_a, t_node **stack_b)
+int	is_sorted(t_node *stack)
 {
-	t_node	*temp;
+	int		i;
+	t_node	*current;
 
-	if (!stack_a || !*stack_a)
-		return ;
-	temp = *stack_a;
-	*stack_a = temp->next;
-	temp->next = *stack_b;
-	*stack_b = temp;
-	write(1, "pb\n", 3);
+	i = 0;
+	current = stack;
+	while (current)
+	{
+		if (current->index != i)
+			return (0);
+		i++;
+		current = current->next;
+	}
+	return (1);
 }
 
-void	pa(t_node **stack_a, t_node **stack_b)
+void	free_stack(t_node **stack)
 {
+	t_node	*current;
 	t_node	*temp;
 
-	if (!stack_b || !*stack_b)
+	if (!stack || !*stack)
 		return ;
-	temp = *stack_b;
-	*stack_b = temp->next;
-	temp->next = *stack_a;
-	*stack_a = temp;
-	write(1, "pa\n", 3);
+	current = *stack;
+	while (current)
+	{
+		temp = current->next;
+		free(current);
+		current = temp;
+	}
+	*stack = NULL;
 }

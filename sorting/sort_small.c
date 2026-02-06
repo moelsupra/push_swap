@@ -1,19 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_small.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/06 20:12:54 by moelamma          #+#    #+#             */
+/*   Updated: 2026/02/06 20:15:15 by moelamma         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
-
-int	stack_size(t_node *stack)
-{
-	int		count;
-	t_node	*current;
-
-	count = 0;
-	current = stack;
-	while (current)
-	{
-		count++;
-		current = current->next;
-	}
-	return (count);
-}
 
 void	sort_two(t_node **stack_a)
 {
@@ -46,46 +43,6 @@ void	sort_three(t_node **stack_a)
 	}
 	else if (a < b && b > c && a > c)
 		rra(stack_a);
-}
-
-int	find_position(t_node *stack, int target_index)
-{
-	int		pos;
-	t_node	*current;
-
-	pos = 0;
-	current = stack;
-	while (current)
-	{
-		if (current->index == target_index)
-			return (pos);
-		pos++;
-		current = current->next;
-	}
-	return (-1);
-}
-
-void	move_to_top(t_node **stack, int pos)
-{
-	int	size;
-
-	size = stack_size(*stack);
-	if (pos <= size / 2)
-	{
-		while (pos > 0)
-		{
-			ra(stack);
-			pos--;
-		}
-	}
-	else
-	{
-		while (pos < size)
-		{
-			rra(stack);
-			pos++;
-		}
-	}
 }
 
 void	sort_four(t_node **stack_a, t_node **stack_b)

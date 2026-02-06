@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   reverse_rotate.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/06 20:23:59 by moelamma          #+#    #+#             */
+/*   Updated: 2026/02/06 20:25:40 by moelamma         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 void	reverse_rotate(t_node **stack)
@@ -18,6 +30,7 @@ void	reverse_rotate(t_node **stack)
 	last->next = *stack;
 	*stack = last;
 }
+
 void	rra(t_node **stack_a)
 {
 	reverse_rotate(stack_a);
