@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 17:18:10 by moelamma          #+#    #+#             */
-/*   Updated: 2026/02/06 17:18:11 by moelamma         ###   ########.fr       */
+/*   Updated: 2026/02/06 20:29:57 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	main(int argc, char **argv)
 	else if (count == 5)
 		sort_five(&stack_a, &stack_b);
 	else
-		chunk_sort(&stack_a, &stack_b, count);	
+		chunk_sort(&stack_a, &stack_b, count);
 	free(numbers);
 	free_stack(&stack_a);
 	free_stack(&stack_b);

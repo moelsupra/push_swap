@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 20:12:54 by moelamma          #+#    #+#             */
-/*   Updated: 2026/02/06 20:15:15 by moelamma         ###   ########.fr       */
+/*   Updated: 2026/02/06 23:28:06 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	sort_four(t_node **stack_a, t_node **stack_b)
 {
 	int	pos;
 
-	pos = find_position(*stack_a, 0);
+	pos = find_index_position(*stack_a, 0);
 	move_to_top(stack_a, pos);
 	pb(stack_a, stack_b);
 	sort_three(stack_a);
@@ -60,10 +60,10 @@ void	sort_five(t_node **stack_a, t_node **stack_b)
 {
 	int	pos;
 
-	pos = find_position(*stack_a, 0);
+	pos = find_index_position(*stack_a, 0);
 	move_to_top(stack_a, pos);
 	pb(stack_a, stack_b);
-	pos = find_position(*stack_a, 1);
+	pos = find_index_position(*stack_a, 1);
 	move_to_top(stack_a, pos);
 	pb(stack_a, stack_b);
 	sort_three(stack_a);

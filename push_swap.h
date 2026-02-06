@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 20:19:10 by moelamma          #+#    #+#             */
-/*   Updated: 2026/02/06 20:23:15 by moelamma         ###   ########.fr       */
+/*   Updated: 2026/02/06 23:28:52 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	rrr(t_node **stack_a, t_node **stack_b);
 int		stack_size(t_node *stack);
 void	sort_two(t_node **stack_a);
 void	sort_three(t_node **stack_a);
-int		find_position(t_node *stack, int target_index);
+int		find_index_position(t_node *stack, int target_index);
 void	move_to_top(t_node **stack, int pos);
 void	sort_four(t_node **stack_a, t_node **stack_b);
 void	sort_five(t_node **stack_a, t_node **stack_b);

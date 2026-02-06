@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 20:12:49 by moelamma          #+#    #+#             */
-/*   Updated: 2026/02/06 20:15:50 by moelamma         ###   ########.fr       */
+/*   Updated: 2026/02/06 23:28:22 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	stack_size(t_node *stack)
 	return (count);
 }
 
-int	find_position(t_node *stack, int target_index)
+int	find_index_position(t_node *stack, int target_index)
 {
 	int		pos;
 	t_node	*current;

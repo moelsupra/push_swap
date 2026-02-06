@@ -6,7 +6,7 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 20:13:00 by moelamma          #+#    #+#             */
-/*   Updated: 2026/02/06 20:13:01 by moelamma         ###   ########.fr       */
+/*   Updated: 2026/02/06 23:56:04 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,23 +38,6 @@ int	find_max_index(t_node *stack)
 		current = current->next;
 	}
 	return (max);
-}
-
-int	find_index_position(t_node *stack, int target_index)
-{
-	int		pos;
-	t_node	*current;
-
-	pos = 0;
-	current = stack;
-	while (current)
-	{
-		if (current->index == target_index)
-			return (pos);
-		pos++;
-		current = current->next;
-	}
-	return (-1);
 }
 
 void	push_back_from_b(t_node **stack_a, t_node **stack_b)
