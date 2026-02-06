@@ -6,13 +6,13 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 15:41:09 by moelamma          #+#    #+#             */
-/*   Updated: 2026/02/06 17:17:45 by moelamma         ###   ########.fr       */
+/*   Updated: 2026/02/07 00:24:29 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	process_sign(char *str, int *i)
+static int	process_sign(char *str, int *i)
 {
 	while (str[*i] == ' ' || str[*i] == '\t')
 		(*i)++;

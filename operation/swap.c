@@ -6,13 +6,13 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 20:24:11 by moelamma          #+#    #+#             */
-/*   Updated: 2026/02/06 20:24:43 by moelamma         ###   ########.fr       */
+/*   Updated: 2026/02/07 00:25:02 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	swap(t_node **stack)
+static void	swap(t_node **stack)
 {
 	t_node	*first;
 	t_node	*second;

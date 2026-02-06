@@ -6,13 +6,13 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 20:13:00 by moelamma          #+#    #+#             */
-/*   Updated: 2026/02/07 00:12:55 by moelamma         ###   ########.fr       */
+/*   Updated: 2026/02/07 00:26:04 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	calculate_chunk_size(int size)
+static int	calculate_chunk_size(int size)
 {
 	if (size <= 100)
 		return (14);
@@ -22,7 +22,7 @@ int	calculate_chunk_size(int size)
 		return (50);
 }
 
-int	find_max_index(t_node *stack)
+static int	find_max_index(t_node *stack)
 {
 	int		max;
 	t_node	*current;
@@ -40,7 +40,7 @@ int	find_max_index(t_node *stack)
 	return (max);
 }
 
-void	rotate_max_to_top(t_node **stack_b, int pos, int size)
+static void	rotate_max_to_top(t_node **stack_b, int pos, int size)
 {
 	if (pos <= size / 2)
 	{
@@ -60,7 +60,7 @@ void	rotate_max_to_top(t_node **stack_b, int pos, int size)
 	}
 }
 
-void	push_back_from_b(t_node **stack_a, t_node **stack_b)
+static void	push_back_from_b(t_node **stack_a, t_node **stack_b)
 {
 	int	max_index;
 	int	pos;

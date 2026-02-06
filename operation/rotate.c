@@ -6,13 +6,13 @@
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 20:24:06 by moelamma          #+#    #+#             */
-/*   Updated: 2026/02/06 20:24:07 by moelamma         ###   ########.fr       */
+/*   Updated: 2026/02/07 00:25:11 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	rotate(t_node	**stack)
+static void	rotate(t_node	**stack)
 {
 	t_node	*first;
 	t_node	*last;

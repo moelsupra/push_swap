@@ -1,9 +1,9 @@
 NAME = push_swap
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I.
 
-SRCS = 	push_swap.c \
+SRCS = 	main.c \
 		validation_parsing/parsing.c \
 		validation_parsing/validation.c \
 		stack/stack.c \

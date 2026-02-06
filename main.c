@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moelamma <moelamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 17:18:10 by moelamma          #+#    #+#             */
-/*   Updated: 2026/02/07 00:07:47 by moelamma         ###   ########.fr       */
+/*   Updated: 2026/02/07 00:30:51 by moelamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	handle_error(int *numbers)
+static void	handle_error(int *numbers)
 {
 	if (numbers)
 		free(numbers);
 	write(2, "Error\n", 6);
 }
 
-void	sort_stack(t_node **stack_a, t_node **stack_b, int count)
+static void	sort_stack(t_node **stack_a, t_node **stack_b, int count)
 {
 	if (count == 2)
 		sort_two(stack_a);
